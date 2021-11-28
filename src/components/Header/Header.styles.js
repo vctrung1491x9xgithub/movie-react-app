@@ -91,6 +91,7 @@ export const LeftMenu = styled.div`
 `;
 export const LeftMenuItem = styled(NavLink)`
     color: ${YELLOW}; 
+    font-size: 2rem;
     margin-bottom: 10px;
     margin-left: 20px;
     border-bottom: 1px solid transparent;

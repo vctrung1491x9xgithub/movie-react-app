@@ -1,10 +1,8 @@
-import React, { Fragment, useEffect, useState } from 'react' 
+import React, { Fragment } from 'react' 
 import { Grid } from '@material-ui/core';
 import {  InfoName, InfoRow, Button, Iframe } from './Play.styles';
 
 const Play = ({ trailer }) => {
-    
-    console.log(trailer);
     const keyList = trailer.reduce((acc, item) => {
         if (item.type === "Trailer") {
             acc.push(item.key);

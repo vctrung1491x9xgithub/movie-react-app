@@ -21,7 +21,7 @@ const Trailer = ({ id, mediaType }) => {
         return () => {
             setTrailers([]);  
         }
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
     // 
     
     const settings = {

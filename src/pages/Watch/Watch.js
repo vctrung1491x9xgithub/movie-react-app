@@ -43,7 +43,7 @@ const Watch = ({ name, match }) => {
         setTrailer(trailerList);
     };
     useEffect(() => {
-        getTrailer();// eslint-disable-next-line
+        getTrailer(); // eslint-disable-next-line
     }, []);
     const keyList = trailer.reduce((acc, item) => {
         if (item.type === "Trailer") {

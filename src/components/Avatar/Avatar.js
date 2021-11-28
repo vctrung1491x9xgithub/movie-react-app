@@ -25,7 +25,7 @@ const Avatar = ({ imagePath, imageTitle, ActorID }) => {
         return () => { 
             setUrl(null);
         }
-    }, [ActorID])
+    }, [ActorID]) // eslint-disable-line react-hooks/exhaustive-deps
     return (
         <AvatarContainer>
             <Poster

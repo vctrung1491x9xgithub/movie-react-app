@@ -6,6 +6,7 @@ const MovieCredits = ({ ActorID }) => {
     const [credits, setCredits] = useState([]);
     const [showAll, setShowAll] = useState(false)
     const getCredits = async () => {
+        
         const url = `https://api.themoviedb.org/3/person/${ActorID}/movie_credits?api_key=${process.env.REACT_APP_MOVIE_API_KEY}&language=en-US`;
         const response = await fetch(url);
         const data = await response.json();
@@ -14,12 +15,12 @@ const MovieCredits = ({ ActorID }) => {
 
     useEffect(() => {
         if (ActorID) {
-            getCredits();
+            getCredits(); 
         }
         return () => {
             setCredits([]);
         }
-    }, [ActorID]);
+    }, [ActorID ]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const onSetShowAll = () => {
         setShowAll(!showAll);

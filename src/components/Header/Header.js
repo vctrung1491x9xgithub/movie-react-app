@@ -11,8 +11,7 @@ import { LeftMenu, LeftMenuItem, Logo, Menu, MenuItem, MenuLink, NavBar, NavBarB
  } from './Header.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
-import { NAV_LINKS } from '../../constants';
-import { useState } from 'react';
+import { NAV_LINKS } from '../../constants'; 
 import { useDispatch, useSelector } from 'react-redux';
 import * as collectionActions from '../../actions/collectionActions';
 
@@ -24,8 +23,7 @@ import * as collectionActions from '../../actions/collectionActions';
 //     }
 // })
 
-const Header = () => {
-    const [showMenuMobile, setShowMenuMobile] = useState(true);
+const Header = () => { 
     // const [myCollection, setMyCollection] = useState([]);
     const collection = useSelector(state => state.collections.collectionData);
     const dispatch = useDispatch();
@@ -73,12 +71,12 @@ const Header = () => {
                         <Logo color={'#EF5014'}>VCT</Logo>
                         <Logo>Films</Logo>
                     </NavBarBrand>
-                    <Menu showMenuMobile={showMenuMobile}>
+                    <Menu>
                         {renderMenu()}
                     </Menu>
                     <LeftMenu>
                         <LeftMenuItem to="/search" activeClassName="active">
-                            <SearchIcon fontSize="large" />
+                            <SearchIcon   />
                             {/* <ThemeProvider theme={darkTheme}>
                             <FormControl >
                                 <TextField
@@ -98,7 +96,7 @@ const Header = () => {
                         </LeftMenuItem>
                         <LeftMenuItem to="/collection" activeClassName="active">
                             <Badge badgeContent={collection?.length} color="secondary">
-                                <VideoLibraryIcon fontSize="large" />
+                                <VideoLibraryIcon  />
                             </Badge>
                         </LeftMenuItem>
                     </LeftMenu>

@@ -11,8 +11,7 @@ const Collection = ({ name }) => {
 
     const onDeleteCollection = id => {
          dispatch(collectionActions.deleteCollection(id));
-    }
-    console.log(collection);
+    } 
     return (
         <Fragment>
             <Title>{name}</Title>

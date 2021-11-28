@@ -16,7 +16,7 @@ const WatchControls = ({ playMovie, data, type, keyList }) => {
         if (localStorage && localStorage.getItem('collection')) {
             dispatch(collectionActions.addCollection(JSON.parse(localStorage.getItem('collection'))));
         }
-    }, [localStorage.getItem('collection')]);
+    }, [localStorage.getItem('collection')]); // eslint-disable-line react-hooks/exhaustive-deps
 
     const onPlayMovie = (e) => {
         e.preventDefault();
