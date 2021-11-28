@@ -28,10 +28,7 @@ export const NavBarContent = styled.div`
     align-items: center; 
     justify-content: space-between;
 `;
-// export const NavButtonMenuMobile = styled.div`
-//     color: #fff;
-//     margin-right: 10px; 
-// `;
+ 
 export const NavBarBrand = styled(Link)`
     display: flex;
     align-items: center;

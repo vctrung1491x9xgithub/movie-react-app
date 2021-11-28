@@ -6,12 +6,13 @@ import {
 // import MenuIcon from '@material-ui/icons/Menu';
 // import CloseIcon from '@material-ui/icons/Close';
 import React, { Fragment, useEffect } from 'react'
-import { LeftMenu, LeftMenuItem, Logo, Menu, MenuItem, MenuLink, NavBar, NavBarBrand, NavBarContent, 
-    // NavButtonMenuMobile,
- } from './Header.styles'
+import {
+    LeftMenu, LeftMenuItem, Logo, Menu, MenuItem, MenuLink, NavBar, NavBarBrand, NavBarContent,
+
+} from './Header.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
-import { NAV_LINKS } from '../../constants'; 
+import { NAV_LINKS } from '../../constants';
 import { useDispatch, useSelector } from 'react-redux';
 import * as collectionActions from '../../actions/collectionActions';
 
@@ -23,15 +24,15 @@ import * as collectionActions from '../../actions/collectionActions';
 //     }
 // })
 
-const Header = () => { 
+const Header = () => {
     // const [myCollection, setMyCollection] = useState([]);
     const collection = useSelector(state => state.collections.collectionData);
     const dispatch = useDispatch();
-    
+
     useEffect(() => {
         if (localStorage && localStorage.getItem('collection')) {
             dispatch(collectionActions.addCollection(JSON.parse(localStorage.getItem('collection'))));
-        } 
+        }
     }, [dispatch]);
 
     const renderMenu = () => {
@@ -76,7 +77,7 @@ const Header = () => {
                     </Menu>
                     <LeftMenu>
                         <LeftMenuItem to="/search" activeClassName="active">
-                            <SearchIcon   />
+                            <SearchIcon />
                             {/* <ThemeProvider theme={darkTheme}>
                             <FormControl >
                                 <TextField
@@ -96,7 +97,7 @@ const Header = () => {
                         </LeftMenuItem>
                         <LeftMenuItem to="/collection" activeClassName="active">
                             <Badge badgeContent={collection?.length} color="secondary">
-                                <VideoLibraryIcon  />
+                                <VideoLibraryIcon />
                             </Badge>
                         </LeftMenuItem>
                     </LeftMenu>
